@@ -1,0 +1,167 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.entry-meta {
+    font-size: $font-size-sm;
+    color: $gray-600;
+}
+
+.text-white a {
+	color: $white;
+}
+
+.has-medium-font-size,
+.has-large-font-size, 
+.has-x-large-font-size, 
+.has-larger-font-size, 
+.has-huge-font-size {
+	line-height: $headings-line-height;
+}
+
+ul.wp-block-list {
+    padding-left: 0;
+
+    li {
+        margin-bottom: $spacer;
+        background: url('../img/icono-check-circulo.svg') no-repeat left top transparent;
+        list-style-type: none;
+        padding-left: 3rem;
+        min-height: 2rem;
+    }
+
+}
+
+h1, .h1 {
+
+}
+
+h2, .h2 {
+    font-weight: $font-weight-bold;
+}
+
+h3, .h3 {
+    font-weight: $font-weight-normal;
+}
+
+h4, .h4 {
+
+}
+
+h5, .h5 {
+    font-weight: $font-weight-normal;
+}
+
+h6, .h6 {
+    font-weight: $font-weight-normal;
+}
+
+.display-1 {
+    font-weight: $font-weight-normal;
+}
+
+.display-2 {
+
+}
+
+.display-3 {
+
+}
+
+.display-4 {
+
+}
+
+small,
+.small {
+    line-height: $headings-line-height;
+}
+
+mark,
+.mark {
+
+}
+
+blockquote,
+.blockquote,
+.wp-block-quote {
+    border: 1px solid $gray-300;
+    padding: $spacer;
+    font-size: $font-size-base * 1.375;
+    color: $primary;
+    line-height: $headings-line-height;
+}
+
+.entry-title {
+    max-width: 600px;
+}
+
+.related-terms-text *:not(h2) {
+    padding-left: $spacer * 2;
+
+    @include media-breakpoint-up(md) {
+        padding-left: $spacer * 6;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    
+    h1, .h1 {
+        font-size: 2.75rem;
+    }
+    
+    h2, .h2 {
+        font-size: 2.25rem;
+    }
+    
+    h3, .h3 {
+        font-size: 2.25rem;
+    }
+    
+    h4, .h4 {
+        font-size: 1.875rem;
+    }
+
+    h5, .h5 {
+
+    }
+
+    h6, .h6 {
+
+    }
+
+    .lead {
+
+    }
+
+    .display-1 {
+        font-size: 4.375rem;
+    }
+    
+    .display-2 {
+        font-size: 3.75rem;
+    }
+    
+    .display-3 {
+        font-size: 3.25rem;
+    }
+    
+    .display-4 {
+        font-size: 2.75rem;
+    }
+    
+}
+
+#search-wrapper,
+#error-404-wrapper {
+    padding-top: 10rem;
+
+    h1.page-title {
+        font-size: $font-size-base * 1.75;
+    }
+
+    h2 {
+        font-size: $font-size-base * 1.4;
+    }
+}

@@ -1,0 +1,15 @@
+.hfeed-post.type-post {
+
+    .wp-post-image,
+    .wp-post-image > * {
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 0;
+    }
+
+}
+
+.hfeed-post-content-wrapper {
+    border-left: 2px solid $primary-40;
+    padding: $spacer * 3 0 0 $spacer;
+}

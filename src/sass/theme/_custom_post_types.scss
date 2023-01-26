@@ -1,0 +1,134 @@
+.single-product {
+
+	.entry-content .wrapper {
+		padding: $grid-gutter-width*1.5 0;
+	}
+
+    h2, .h2,
+    h3, .h3,
+    h4, .h4 {
+        margin-top: $spacer * 2;
+    }
+
+    h2 {
+        font-weight: $font-weight-normal;
+    }
+
+    h3 {
+        font-size: $h4-font-size;
+    }
+
+    .product-summary {
+        padding-bottom: 8rem;
+
+        .product-serie.invisible {
+            display: none;
+        }
+
+    }
+
+    #main > article > .entry-content > :first-child {
+        padding-top: 7rem!important;
+    }
+}
+
+.product-serie {
+    font-size: $font-size-lg;
+    color: $primary;
+    margin-bottom: 0;
+}
+
+.product-serie-value {
+    font-weight: $font-weight-bold;
+}
+
+.product-card {
+    background-color: $gray-400;
+    transition: $transition-base;
+    border-radius: 0 0 $border-radius $border-radius;
+
+    *,
+    &:hover * {
+        color: $white;
+    }
+
+    &:hover {
+        background-color: $primary;
+        box-shadow: $box-shadow;
+    }
+
+    .product-serie {
+        font-size: $font-size-base;
+    }
+
+    .card-img-top,
+    .card-img-top * {
+        background-color: $white;
+        height: 300px;
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: 0 !important;
+    }
+
+    .card-title {
+        font-weight: $font-weight-light;
+        font-size: $font-size-lg;
+        line-height: $headings-line-height;
+    }
+
+    .card-body {
+        min-height: 130px;
+    }
+
+}
+
+.post-type-archive-product .breadcrumb,
+.tax-product_cat .breadcrumb,
+.rich-term-description {
+    background-color: $light;
+}
+
+.post-type-archive-product .breadcrumb,
+.tax-product_cat .breadcrumb {
+    margin-bottom: 0 !important;
+}
+
+.wp-block-group.rich-term-description {
+    padding-bottom: 8rem;
+    margin-bottom: $spacer * 2 !important;
+}
+
+.subcategory {
+
+    .card-body {
+        min-height: 120px;
+    }
+    
+    .subcategory-archive-image *,
+    img.subcategory-archive-image {
+        // height: 200px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .subcategory-archive-image *,
+    img.subcategory-archive-image {
+        clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    }
+
+    > .row > div:not(:first-child) {
+        padding-top: $spacer * 2;
+        border-top: 1px solid $light;
+    }
+}
+
+.hfeed article.case-study {
+
+    @include media-breakpoint-up(md) {
+
+        &:nth-child(even)> .row {
+            flex-direction: row-reverse;
+        }
+
+    }
+}

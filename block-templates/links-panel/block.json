@@ -1,0 +1,12 @@
+{
+    "name": "acf/links-panel",
+    "title": "Panel de enlaces",
+    "description": "Enlaces a páginas. Se mostrará a dos columnas, el primer enlace con imagen de fondo en la izquierda y el resto a la derecha más pequeños y sin imagen de fondo.",
+    "category": "formatting",
+    "icon": "grid-view",
+    "keywords": ["enlaces", "links", "páginas", "grid", "panel", "producto"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "links-panel.php"
+    }
+}

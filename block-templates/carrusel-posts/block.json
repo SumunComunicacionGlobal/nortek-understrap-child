@@ -1,0 +1,11 @@
+{
+    "name": "acf/carrusel-posts",
+    "title": "Carrusel de páginas o posts",
+    "category": "formatting",
+    "icon": "grid-view",
+    "keywords": ["posts", "blog", "casos", "exito", "categorias", "producto", "carrusel", "sectores"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "carrusel-posts.php"
+    }
+}

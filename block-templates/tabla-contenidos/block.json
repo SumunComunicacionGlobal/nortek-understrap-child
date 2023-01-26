@@ -1,0 +1,12 @@
+{
+    "name": "acf/tabla-contenidos",
+    "title": "Tabla de contenidos",
+    "description": "Enlaces a páginas hijas.",
+    "category": "formatting",
+    "icon": "grid-view",
+    "keywords": ["enlaces", "links", "páginas", "indice"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "tabla-contenidos.php"
+    }
+}

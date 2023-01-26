@@ -1,0 +1,75 @@
+html {
+	scroll-behavior: smooth;
+}
+
+/* Fixed header fix */
+:target:before {
+	content: "";
+	display: block;
+	height: 65px; /* same as your fixed header height */
+	margin: -65px 0 0; /* negative fixed header height */
+}
+
+.admin-bar {
+
+	.fixed-top {
+		top: 46px;
+
+		@include media-breakpoint-up(md) {
+			top: 32px;
+		}
+	}
+}
+
+.full-screen {
+	min-height: 100vh;
+}
+
+
+.pagination {
+	margin-top: $spacer * 2;
+	justify-content: center;
+}
+
+.comments-area {
+	margin-top: $spacer * 3;
+}
+
+.back-to-top {
+	transform: rotate(270deg);
+	background-image: url('../img/flecha-derecha-blanca.svg');
+	background-size: 30px auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 60px;
+	height: 60px;
+	background-color: $primary;
+	border: 1px solid transparent;
+	color: $white;
+	right: 0;
+
+	position: fixed;
+	bottom: -60px;
+	opacity: 0;
+	transition: $transition-base;
+	z-index: 10000;
+}
+
+// .fixed-bottom-content {
+// 	padding: 0 $spacer $spacer;
+// 	position: fixed;
+// 	bottom: -60px;
+// 	opacity: 0;
+// 	transition: $transition-base;
+// 	z-index: 10000;
+// 	pointer-events: none;
+
+// 	a {
+// 		pointer-events: all;
+// 	}
+// }
+
+.scrolled .back-to-top {
+	opacity: .9;
+	bottom: 0;
+}

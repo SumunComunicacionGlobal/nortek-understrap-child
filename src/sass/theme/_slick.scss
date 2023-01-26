@@ -1,0 +1,155 @@
+.slick-slider {
+	padding-top: 6rem;
+
+	.slick-prev,
+	.slick-next {
+		z-index: 1;
+		top: 0;
+		width: 3rem;
+		height: 3rem;
+		transform: none;
+		background-color: transparent;
+		transition: $btn-transition;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: transparent;
+		}
+
+		&:before {
+			font-size: $spacer;
+			color: $black;
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+			mask-image: url('../img/flecha-derecha-blanca.svg');
+			mask-size: 1.5rem auto;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			display: block;
+			background-color: $gray-800;
+		}
+	}
+
+	.slick-prev {
+		left: unset;
+		right: calc( 3rem + 1px );
+		transform: rotate(180deg);
+	}
+
+	.slick-next {
+		right: 0;
+	}
+
+}
+
+.slider-home {
+	padding-top: 0;
+		
+	.slick-prev,
+	.slick-next {
+		top: calc(100% + 1px);
+		width: 7rem;
+		height: 7rem;
+		background-color: $primary;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: darken( $primary, $theme-color-interval );
+		}
+		
+
+		&:before {
+			mask-image: url('../img/chevron-right.svg');
+			background-color: $white;
+		}
+
+		&.slick-disabled {
+			background-color: $gray-400;
+		}
+	}
+
+	.slick-prev {
+		right: calc( 7rem + 1px );
+	}
+
+}
+
+.slick-carousel {
+
+}
+
+.slick-spaced-carousel {
+
+	position: relative;
+	padding-bottom: $spacer * 2;
+
+	.slick-list {
+		margin: 0 -$grid-gutter-width/2;
+		// padding-right: 100px;
+
+		// @include media-breakpoint-up(md) {
+			// padding-right: 70px;
+		// }
+
+		// @include media-breakpoint-up(md) {
+		// 	padding-right: 10%;
+		// }
+	}
+
+	.slick-slide {
+		margin: 0 $grid-gutter-width/2;
+		padding: 0 !important;
+		// transition: $transition-fade;
+
+		// &:not(.slick-active) {
+			// opacity: .5;
+		// }
+	}
+
+}
+
+.slick-slider {
+
+	.wp-block-cover {
+		min-height: 560px;
+		align-items: flex-end;
+		padding: $spacer * 4 0;
+	}
+
+	&.slider-home {
+		background-color: $white;
+		color: $body-color;
+		padding-left: 7rem;
+
+		.slide {
+			padding: $spacer $spacer $spacer $spacer * 3;
+		}
+
+		.slick-prev,
+		.slick-next {
+			left: 0;
+			top: 0;
+		}
+
+		.slick-prev {
+			top: calc(7rem + 1px);
+		}
+
+		.wp-post-image {
+			height: 12rem;
+			object-fit: cover;
+		}
+
+	}
+}
+
+.slick-carrusel-posts {
+
+}

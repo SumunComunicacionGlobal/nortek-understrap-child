@@ -1,0 +1,151 @@
+.mw-300 { max-width: 300px; }
+.mw-400 { max-width: 400px; }
+.mw-500 { max-width: 500px; }
+.mw-600 { max-width: 600px; }
+.mw-700 { max-width: 700px; }
+.mw-800 { max-width: 800px; }
+
+.mt-neg-200 {
+    margin-top: -200px;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper {
+	padding: $grid-gutter-width*2 0;
+}
+
+#wrapper-navbar + .wrapper {
+    padding: 0;
+}
+
+#search-wrapper,
+#error-404-wrapper {
+    padding-top: 10rem !important;
+
+    .page-header {
+        margin-bottom: $spacer * 2;
+    }
+}
+
+.stretch-linked-block {
+    position: relative !important;
+    transition: $transition-fade;
+
+    .editorskit-block-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 90;
+    }
+
+    &:hover {
+        opacity: .7;
+
+        .wp-block-button.is-style-arrow-link .wp-block-button__link:after {
+            right: 0;
+        }
+    }
+}
+
+.stretched-link {
+   // color: $body-color;
+
+    &:hover {
+        text-decoration: none;
+        color: $body-color;
+    }
+}
+
+.entry-footer {
+    position: relative;
+    z-index: 2;
+}
+
+.fixed-content {
+    position: fixed;
+    z-index: $zindex-fixed;
+    bottom: 0;
+    left: 0;
+
+    .wp-block-button__link {
+        transition: $transition-base;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+
+    .fixed-content {
+        bottom: unset;
+        left: unset;
+        top: 10%;
+        right: 0;
+        transform-origin: bottom right;
+        transform: rotate(-90deg);
+    }
+
+    body.scrolled:not(.near-bottom) .fixed-content .wp-block-buttons .wp-block-button .wp-block-button__link {
+        padding-top: .3em;
+        padding-bottom: .5rem;
+    }
+
+}
+
+.close {
+
+    > span {
+        text-indent: -99999px;
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background: url('../img/close.svg') no-repeat center;
+    }
+}
+
+.carrusel-post {
+    border-left: 1px solid $primary;
+
+    .wp-block-buttons {
+        justify-content: flex-start !important;
+    }
+}
+
+.list-group {
+
+    &.list-group-flush {
+        border: $list-group-border-width solid $list-group-border-color;
+        border-width: $list-group-border-width 0 $list-group-border-width;
+    }
+}
+
+.btn-download {
+    text-align: left;
+    color: $body-color;
+    padding-right: calc( $btn-padding-x + 2rem );
+    white-space: normal;
+    border-radius: 0;
+
+    &:before {
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        position: absolute;
+        right: $btn-padding-x;
+        background-color: $body-color;
+        mask-image: url( '../img/icono-download.svg');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        transition: $transition-base;
+    }
+
+    &[href*=".pdf"]:before {
+        mask-image: url( '../img/icono-file-text.svg');
+    }
+
+    &:hover:before {
+        right: $btn-padding-x * .5;
+    }
+}

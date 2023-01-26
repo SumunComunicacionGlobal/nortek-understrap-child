@@ -1,0 +1,36 @@
+#wrapper-prefooter {
+	border-top: 1px solid $gray-300;
+}
+
+#wrapper-footer-full {
+	background-color: transparent;
+	padding-bottom: 0;
+}
+
+#footer-full-content > .row.no-gutters {
+
+	> .footer-widget {
+		border: 1px solid $gray-300;
+		padding: $spacer * 3 $spacer * 2;
+		margin-right: -1px;
+		margin-bottom: -1px;
+	}
+}
+
+#wrapper-footer {
+	padding: 0 0 $spacer;
+	font-size: $font-size-sm;
+
+	@include media-breakpoint-down(sm) {
+		text-align: center;
+	}
+
+	@include media-breakpoint-down(xs) {
+		padding-bottom: $spacer * 5;
+	}
+
+}
+
+#colophon {
+	padding: $spacer 0;
+}

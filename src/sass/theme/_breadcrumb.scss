@@ -1,0 +1,17 @@
+.breadcrumb {
+    @extend .alignfull;
+    padding-bottom: $spacer * 3 !important;
+
+    .breadcrumb-inner {
+        @include make-container();
+        @include make-container-max-widths();
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+body.breadcrumb-bg-light .breadcrumb {
+    background-color: $light;
+}

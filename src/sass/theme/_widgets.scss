@@ -1,0 +1,53 @@
+.widget-area {
+
+	.widget {
+        margin-bottom: $spacer * 2;
+	}
+}
+
+.footer-widget {
+    margin-bottom: $spacer;
+}
+
+#wrapper-footer {
+
+	.footer-widget,
+	.footer-widget p {
+		margin-bottom: 0;
+	}
+}
+
+.widget-title {
+	color: $secondary-80;
+	letter-spacing: -0.015em;
+	font-weight: $font-weight-bold;
+}
+
+.widget_nav_menu {
+
+	.menu {
+		padding-left: 0;
+		list-style: none;
+
+		> li {
+			margin-bottom: $spacer;
+		}
+	}
+
+	a {
+		color: $primary;
+		font-size: $font-size-lg;
+		font-weight: $font-weight-light;
+	}
+
+}
+
+#wrapper-footer-full #menu-footer-2 {
+
+	a {
+		font-size: $font-size-base;
+		font-weight: $font-weight-base;
+		color: $body-color;
+	}
+
+}

@@ -1,0 +1,12 @@
+table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-hover;
+    // @extend .table-responsive;  
+	@extend .table-bordered;
+
+	th {
+		padding-left: 0;
+		font-size: $font-size-sm;
+	}
+}

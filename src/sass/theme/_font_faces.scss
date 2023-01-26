@@ -1,0 +1,565 @@
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-BlackItalic.eot');
+// //     src: local('☞Galano Grotesque Black Italic'), local('GalanoGrotesque-BlackItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-BlackItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-BlackItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-BlackItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-BlackItalic.ttf') format('truetype');
+// //     font-weight: 900;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Heavy.eot');
+// //     src: local('☞Galano Grotesque Alt Heavy'), local('GalanoGrotesqueAlt-Heavy'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Heavy.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Heavy.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Heavy.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Heavy.ttf') format('truetype');
+// //     font-weight: 900;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-LightItalic.eot');
+// //     src: local('☞Galano Grotesque Alt Light Italic'), local('GalanoGrotesqueAlt-LightItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-LightItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-LightItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-LightItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-LightItalic.ttf') format('truetype');
+// //     font-weight: 300;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BlackItalic.eot');
+// //     src: local('☞Galano Grotesque Alt Black Italic'), local('GalanoGrotesqueAlt-BlackItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BlackItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BlackItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BlackItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BlackItalic.ttf') format('truetype');
+// //     font-weight: 900;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Regular.eot');
+// //     src: local('☞Galano Grotesque Alt'), local('GalanoGrotesqueAlt-Regular'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Regular.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Regular.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Regular.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Regular.ttf') format('truetype');
+// //     font-weight: normal;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLightItalic.eot');
+// //     src: local('☞Galano Grotesque Alt ExtraLight Italic'), local('GalanoGrotesqueAlt-ExtraLightItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLightItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLightItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLightItalic.ttf') format('truetype');
+// //     font-weight: 200;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAltDEMO';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAltDEMO-Bold.eot');
+// //     src: local('☞Galano Grotesque Alt DEMO Bold'), local('GalanoGrotesqueAltDEMO-Bold'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAltDEMO-Bold.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAltDEMO-Bold.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAltDEMO-Bold.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAltDEMO-Bold.ttf') format('truetype');
+// //     font-weight: bold;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBold.eot');
+// //     src: local('☞Galano Grotesque Alt SemiBold'), local('GalanoGrotesqueAlt-SemiBold'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBold.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBold.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBold.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBold.ttf') format('truetype');
+// //     font-weight: 600;
+// //     font-style: normal;
+// // }
+
+// @font-face {
+//     font-family: 'GalanoGrotesque';
+//     src: url('../fonts/galano-grotesque/GalanoGrotesque-Bold.eot');
+//     src: local('☞Galano Grotesque Bold'), local('GalanoGrotesque-Bold'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Bold.woff2') format('woff2'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Bold.woff') format('woff'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Bold.ttf') format('truetype');
+//     font-weight: 700;
+//     font-style: normal;
+// }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Light.eot');
+// //     src: local('☞Galano Grotesque Alt Light'), local('GalanoGrotesqueAlt-Light'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Light.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Light.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Light.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Light.ttf') format('truetype');
+// //     font-weight: 300;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-SemiBoldItalic.eot');
+// //     src: local('☞Galano Grotesque SemiBold Italic'), local('GalanoGrotesque-SemiBoldItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-SemiBoldItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-SemiBoldItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-SemiBoldItalic.ttf') format('truetype');
+// //     font-weight: 600;
+// //     font-style: italic;
+// // }
+
+// @font-face {
+//     font-family: 'GalanoGrotesque';
+//     src: url('../fonts/galano-grotesque/GalanoGrotesque-MediumItalic.eot');
+//     src: local('☞Galano Grotesque Medium Italic'), local('GalanoGrotesque-MediumItalic'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-MediumItalic.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-MediumItalic.woff2') format('woff2'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-MediumItalic.woff') format('woff'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-MediumItalic.ttf') format('truetype');
+//     font-weight: 400;
+//     font-style: italic;
+// }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Medium.eot');
+// //     src: local('☞Galano Grotesque Alt Medium'), local('GalanoGrotesqueAlt-Medium'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Medium.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Medium.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Medium.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Medium.ttf') format('truetype');
+// //     font-weight: 500;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-BoldItalic.eot');
+// //     src: local('☞Galano Grotesque Bold Italic'), local('GalanoGrotesque-BoldItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-BoldItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-BoldItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-BoldItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-BoldItalic.ttf') format('truetype');
+// //     font-weight: bold;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Bold.eot');
+// //     src: local('☞Galano Grotesque Alt Bold'), local('GalanoGrotesqueAlt-Bold'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Bold.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Bold.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Bold.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Bold.ttf') format('truetype');
+// //     font-weight: bold;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueDEMO';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueDEMO-Bold.eot');
+// //     src: local('☞Galano Grotesque DEMO Bold'), local('GalanoGrotesqueDEMO-Bold'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueDEMO-Bold.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueDEMO-Bold.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueDEMO-Bold.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueDEMO-Bold.ttf') format('truetype');
+// //     font-weight: bold;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBold.eot');
+// //     src: local('☞Galano Grotesque Alt ExtraBold'), local('GalanoGrotesqueAlt-ExtraBold'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBold.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBold.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBold.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBold.ttf') format('truetype');
+// //     font-weight: 800;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBoldItalic.eot');
+// //     src: local('☞Galano Grotesque ExtraBold Italic'), local('GalanoGrotesque-ExtraBoldItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBoldItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBoldItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBoldItalic.ttf') format('truetype');
+// //     font-weight: 800;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-Heavy.eot');
+// //     src: local('☞Galano Grotesque Heavy'), local('GalanoGrotesque-Heavy'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Heavy.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Heavy.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Heavy.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Heavy.ttf') format('truetype');
+// //     font-weight: 900;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-HeavyItalic.eot');
+// //     src: local('☞Galano Grotesque Heavy Italic'), local('GalanoGrotesque-HeavyItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-HeavyItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-HeavyItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-HeavyItalic.ttf') format('truetype');
+// //     font-weight: 900;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ThinItalic.eot');
+// //     src: local('☞Galano Grotesque Alt Thin Italic'), local('GalanoGrotesqueAlt-ThinItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ThinItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ThinItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ThinItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ThinItalic.ttf') format('truetype');
+// //     font-weight: 100;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBoldItalic.eot');
+// //     src: local('☞Galano Grotesque Alt SemiBold Italic'), local('GalanoGrotesqueAlt-SemiBoldItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBoldItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBoldItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-SemiBoldItalic.ttf') format('truetype');
+// //     font-weight: 600;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-HeavyItalic.eot');
+// //     src: local('☞Galano Grotesque Alt Heavy Italic'), local('GalanoGrotesqueAlt-HeavyItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-HeavyItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-HeavyItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-HeavyItalic.ttf') format('truetype');
+// //     font-weight: 900;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLight.eot');
+// //     src: local('☞Galano Grotesque Alt ExtraLight'), local('GalanoGrotesqueAlt-ExtraLight'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLight.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLight.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLight.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraLight.ttf') format('truetype');
+// //     font-weight: 200;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBoldItalic.eot');
+// //     src: local('☞Galano Grotesque Alt ExtraBold Italic'), local('GalanoGrotesqueAlt-ExtraBoldItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBoldItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBoldItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-ExtraBoldItalic.ttf') format('truetype');
+// //     font-weight: 800;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BoldItalic.eot');
+// //     src: local('☞Galano Grotesque Alt Bold Italic'), local('GalanoGrotesqueAlt-BoldItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BoldItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BoldItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BoldItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-BoldItalic.ttf') format('truetype');
+// //     font-weight: bold;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Black.eot');
+// //     src: local('☞Galano Grotesque Alt Black'), local('GalanoGrotesqueAlt-Black'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Black.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Black.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Black.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Black.ttf') format('truetype');
+// //     font-weight: 900;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-SemiBold.eot');
+// //     src: local('☞Galano Grotesque SemiBold'), local('GalanoGrotesque-SemiBold'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-SemiBold.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-SemiBold.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-SemiBold.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-SemiBold.ttf') format('truetype');
+// //     font-weight: 600;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-MediumItalic.eot');
+// //     src: local('☞Galano Grotesque Alt Medium Italic'), local('GalanoGrotesqueAlt-MediumItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-MediumItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-MediumItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-MediumItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-MediumItalic.ttf') format('truetype');
+// //     font-weight: 500;
+// //     font-style: italic;
+// // }
+
+// @font-face {
+//     font-family: 'GalanoGrotesque';
+//     src: url('../fonts/galano-grotesque/GalanoGrotesque-Medium.eot');
+//     src: local('☞Galano Grotesque Medium'), local('GalanoGrotesque-Medium'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Medium.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Medium.woff2') format('woff2'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Medium.woff') format('woff'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Medium.ttf') format('truetype');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-LightItalic.eot');
+// //     src: local('☞Galano Grotesque Light Italic'), local('GalanoGrotesque-LightItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-LightItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-LightItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-LightItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-LightItalic.ttf') format('truetype');
+// //     font-weight: 300;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-Black.eot');
+// //     src: local('☞Galano Grotesque Black'), local('GalanoGrotesque-Black'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Black.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Black.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Black.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Black.ttf') format('truetype');
+// //     font-weight: 900;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Thin.eot');
+// //     src: local('☞Galano Grotesque Alt Thin'), local('GalanoGrotesqueAlt-Thin'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Thin.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Thin.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Thin.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Thin.ttf') format('truetype');
+// //     font-weight: 100;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-Italic.eot');
+// //     src: local('☞Galano Grotesque Italic'), local('GalanoGrotesque-Italic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Italic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Italic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Italic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-Italic.ttf') format('truetype');
+// //     font-weight: normal;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesqueAlt';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Italic.eot');
+// //     src: local('☞Galano Grotesque Alt Italic'), local('GalanoGrotesqueAlt-Italic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Italic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Italic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Italic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesqueAlt-Italic.ttf') format('truetype');
+// //     font-weight: normal;
+// //     font-style: italic;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLightItalic.eot');
+// //     src: local('☞Galano Grotesque ExtraLight Italic'), local('GalanoGrotesque-ExtraLightItalic'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLightItalic.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLightItalic.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLightItalic.ttf') format('truetype');
+// //     font-weight: 200;
+// //     font-style: italic;
+// // }
+
+// @font-face {
+//     font-family: 'GalanoGrotesque';
+//     src: url('../fonts/galano-grotesque/GalanoGrotesque-Light.eot');
+//     src: local('☞Galano Grotesque Light'), local('GalanoGrotesque-Light'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Light.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Light.woff2') format('woff2'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Light.woff') format('woff'),
+//         url('../fonts/galano-grotesque/GalanoGrotesque-Light.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLight.eot');
+// //     src: local('☞Galano Grotesque ExtraLight'), local('GalanoGrotesque-ExtraLight'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLight.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLight.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLight.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraLight.ttf') format('truetype');
+// //     font-weight: 200;
+// //     font-style: normal;
+// // }
+
+// // @font-face {
+// //     font-family: 'GalanoGrotesque';
+// //     src: url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBold.eot');
+// //     src: local('☞Galano Grotesque ExtraBold'), local('GalanoGrotesque-ExtraBold'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBold.eot?#iefix') format('embedded-opentype'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBold.woff2') format('woff2'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBold.woff') format('woff'),
+// //         url('../fonts/galano-grotesque/GalanoGrotesque-ExtraBold.ttf') format('truetype');
+// //     font-weight: 800;
+// //     font-style: normal;
+// // }
+
+
+
+
+
+/*****/
+
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('../fonts/GalanoGrotesque-Italic.woff2') format('woff2'),
+        url('../fonts/GalanoGrotesque-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+// @font-face {
+//     font-family: 'Galano Grotesque';
+//     src: url('../fonts/GalanoGrotesque-BoldItalic.woff2') format('woff2'),
+//         url('../fonts/GalanoGrotesque-BoldItalic.woff') format('woff');
+//     font-weight: bold;
+//     font-style: italic;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Galano Grotesque';
+//     src: url('../fonts/GalanoGrotesque-HeavyItalic.woff2') format('woff2'),
+//         url('../fonts/GalanoGrotesque-HeavyItalic.woff') format('woff');
+//     font-weight: 900;
+//     font-style: italic;
+//     font-display: swap;
+// }
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('../fonts/GalanoGrotesque-ExtraLight.woff2') format('woff2'),
+        url('../fonts/GalanoGrotesque-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('../fonts/GalanoGrotesque-Bold.woff2') format('woff2'),
+        url('../fonts/GalanoGrotesque-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+// @font-face {
+//     font-family: 'Galano Grotesque ExLight';
+//     src: url('../fonts/GalanoGrotesque-ExtraLightItalic.woff2') format('woff2'),
+//         url('../fonts/GalanoGrotesque-ExtraLightItalic.woff') format('woff');
+//     font-weight: 200;
+//     font-style: italic;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Galano Grotesque';
+//     src: url('../fonts/GalanoGrotesque-MediumItalic.woff2') format('woff2'),
+//         url('../fonts/GalanoGrotesque-MediumItalic.woff') format('woff');
+//     font-weight: 500;
+//     font-style: italic;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Galano Grotesque';
+//     src: url('../fonts/GalanoGrotesque-Heavy.woff2') format('woff2'),
+//         url('../fonts/GalanoGrotesque-Heavy.woff') format('woff');
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Galano Grotesque';
+//     src: url('../fonts/GalanoGrotesque-Medium.woff2') format('woff2'),
+//         url('../fonts/GalanoGrotesque-Medium.woff') format('woff');
+//     font-weight: 500;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('../fonts/GalanoGrotesque-Regular.woff2') format('woff2'),
+        url('../fonts/GalanoGrotesque-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

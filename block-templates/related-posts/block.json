@@ -1,0 +1,11 @@
+{
+    "name": "acf/related-posts",
+    "title": "Posts del blog, Casos de éxito o Categorías de producto relacionados",
+    "category": "formatting",
+    "icon": "grid-view",
+    "keywords": ["posts", "blog", "casos", "exito", "categorias", "producto"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "related-posts.php"
+    }
+}
