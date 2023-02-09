@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 
 						<?php nortek_serie(); ?>
 
-						<?php the_title( '<h1 class="h3 product-title single-product-title">', '</h1>' ); ?>
+						<?php the_title( '<h1 class="h3 product-title">', '</h1>' ); ?>
 					
 						<?php echo wpautop( $post->post_excerpt ); ?>
 					</div>
