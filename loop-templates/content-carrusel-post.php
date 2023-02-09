@@ -30,7 +30,6 @@ defined( 'ABSPATH' ) || exit;
 
 			<?php
 			the_excerpt();
-			understrap_link_pages();
 			?>
 
 		</div><!-- .entry-content -->

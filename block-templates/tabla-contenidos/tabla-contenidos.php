@@ -29,8 +29,12 @@ if ( ! empty( $block['align'] ) ) {
 }
 
 global $post;
+$current_post_id = $post->ID;
 
 $posts_ids = get_field( 'toc_posts_ids' ) ?: false;
+if (($key = array_search($current_post_id, $posts_ids)) !== false) {
+    unset($posts_ids[$key]);
+}
 
 $args = false;
 
@@ -44,10 +48,11 @@ if ( $posts_ids ) {
 		
 } elseif( 0 < $post->post_parent ) {
 
-	array(
+	$args = array(
 		'post_type'				=> $post->post_type,
 		'post_parent'			=> $post->post_parent,
 		'orderby'				=> 'menu_order',
+		'post__not_in'			=> $current_post_id,
 	);
 
 }

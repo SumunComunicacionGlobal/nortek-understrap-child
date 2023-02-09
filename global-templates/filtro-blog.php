@@ -10,7 +10,7 @@ $queried_obj_id = get_queried_object_id();
 
 if ( $terms ) { ?>
 
-	<nav class="filter-navbar navbar navbar-expand-lg justify-content-center navbar-light mb-2">
+	<nav class="filter-navbar navbar navbar-expand-lg justify-content-center navbar-light mb-2 px-0">
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#filter-navbar-collapse" aria-controls="filter-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-label mr-1"><?php echo __( 'Por temas', 'smn' ); ?></span> <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@ if ( $terms ) { ?>
 
 				<?php } ?>
 
-				<a class="nav-item nav-link nav-search-button" data-toggle="collapse" href="#search-form" aria-expanded="false" aria-controls="search-form">
+				<a class="nav-item nav-link btn btn-outline-primary nav-search-button" data-toggle="collapse" href="#search-form" aria-expanded="false" aria-controls="search-form">
 					<?php echo __( 'Search' ); ?>
 				</a>
 

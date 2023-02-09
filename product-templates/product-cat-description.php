@@ -9,6 +9,8 @@ if ( is_page_template( 'page-templates/product-archive.php' ) ) {
 	$description = term_description();
 }
 
+if ( !$description ) return false;
+
 $pdf = get_term_meta( get_queried_object_id(), 'pdf', true );
 
 if ( $pdf ) {
@@ -21,7 +23,7 @@ if ( $pdf ) {
 
 	<div class="wp-block-group__inner-container">
 
-		<div class="row">
+		<div class="row align-items-center">
 
 			<div class="col-md-6">
 

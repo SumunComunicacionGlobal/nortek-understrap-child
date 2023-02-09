@@ -165,3 +165,10 @@ blockquote,
         font-size: $font-size-base * 1.4;
     }
 }
+
+@include media-breakpoint-up(xl) {
+    
+    h1.entry-title {
+        font-size: $font-size-base * 3.75;
+    }
+}

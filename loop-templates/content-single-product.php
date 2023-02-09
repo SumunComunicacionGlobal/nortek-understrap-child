@@ -7,7 +7,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-content">
 
-		<div class="wp-block-group alignfull bg-light product-summary">
+		<div class="wp-block-group alignfull product-summary shadow-lg">
 
 			<div class="wp-block-group__inner-container">
 
@@ -38,6 +38,12 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php get_template_part( 'product-templates/product-tabla-contenidos'); ?>
 
+		<div class="row">
+
+			<?php  get_template_part( 'product-templates/product-archivos');	?>
+
+		</div>
+
 		<?php  get_template_part( 'product-templates/product-funcionamiento');	?>
 
 		<?php  get_template_part( 'product-templates/product-especificaciones');	?>
@@ -50,12 +56,6 @@ defined( 'ABSPATH' ) || exit;
 
 		</div>
 
-		<div class="row">
-
-			<?php  get_template_part( 'product-templates/product-archivos');	?>
-
-		</div>
-
 		<?php  get_template_part( 'product-templates/product-relacionados');	?>
 
 		<div class="wp-block-group alignfull bg-light">
@@ -63,8 +63,6 @@ defined( 'ABSPATH' ) || exit;
 			<div class="container">
 
 				<?php smn_reusable_block( 364 ); ?>
-
-				<?php smn_reusable_block( 365 ); ?>
 
 			</div>
 

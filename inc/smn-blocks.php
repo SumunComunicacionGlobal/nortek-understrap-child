@@ -88,6 +88,15 @@ if ( function_exists( 'register_block_style' ) ) {
     );
        
     register_block_style(
+        'core/group',
+        array(
+            'name'         => 'border-left',
+            'label'        => __( 'Borde izquierda', 'smn-admin' ),
+            'is_default'   => false,
+        )
+    );
+       
+    register_block_style(
         'core/praragrap',
         array(
             'name'         => 'cifra-circulo',

@@ -38,22 +38,54 @@ if ( is_singular() ) {
 
 	<div class="wp-block-cover__inner-container">
 
-		<?php if ( is_singular( 'post' ) ) { ?>
+		<?php if ( is_tax( 'product_cat' )) {
 
-			<div class="entry-meta text-white">
+			$description = term_description();
 
-				<?php understrap_posted_on(); ?>
+			if ( !$description ) { ?>
 
-			</div><!-- .entry-meta -->
+				<div class="row align-items-center">
 
-		<?php } ?>
+					<div class="col-md-6">
 
-		<h1 class="entry-title"><?php echo $title; ?></h1>
+						<h1 class="entry-title"><?php echo $title; ?></h1>
 
-		<?php if ( $description) { ?>
+					</div>
+
+					<div class="col-md-6">
+
+						<?php smn_reusable_block( 391 ); ?>
+
+					</div>
+
+				</div>
+				
+			<?php } else { ?>
+
+				<h1 class="entry-title"><?php echo $title; ?></h1>
+
+			<?php }
+
+		} else {
 			
-			<div class="lead"><?php echo $description; ?></div>
-		
+			if ( is_singular( 'post' ) ) { ?>
+
+				<div class="entry-meta text-white">
+
+					<?php understrap_posted_on(); ?>
+
+				</div><!-- .entry-meta -->
+
+			<?php } ?>
+
+			<h1 class="entry-title"><?php echo $title; ?></h1>
+
+			<?php if ( $description) { ?>
+				
+				<div class="lead"><?php echo $description; ?></div>
+			
+			<?php } ?>
+
 		<?php } ?>
 
 	</div>

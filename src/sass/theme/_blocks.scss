@@ -41,7 +41,7 @@ body.understrap-no-sidebar {
     padding: $spacer * 2;
 
     &.is-style-image-header {
-        min-height: 420px;
+        min-height: 560px;
     }
 
     &.is-style-full-height-content {
@@ -302,6 +302,7 @@ body.understrap-no-sidebar {
         transition: $transition-base;
         background-size: cover;
         background-position: center;
+        min-height: 160px;
 
         &:nth-child(2) {
             background-color: $primary-60;
@@ -331,7 +332,7 @@ body.understrap-no-sidebar {
     .links-panel-featured-link {
         background-color: $primary;
         height: 100%;
-        min-height: 400px;
+        min-height: 320px;
         padding: $spacer * 3;
         display: flex;
         flex-direction: column;
@@ -410,6 +411,12 @@ body.understrap-no-sidebar {
     }
 }
 
+@include media-breakpoint-up(lg) {
+    .breadcrumb + .toc-block {
+        transform: translateY(-1rem);
+    }
+}
+
 .is-style-cifra-circulo {
     position: relative;
     @extend .display-1;
@@ -477,5 +484,44 @@ body.understrap-no-sidebar {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+}
+
+.wp-block-file {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacer;
+
+    padding: $spacer*2 $spacer;
+    border-radius: $border-radius;
+    background-color: $secondary-60;
+    transition: $btn-transition;
+
+    a:not(.wp-block-file__button) {
+        font-size: $lead-font-size;
+        color: $body-color;
+    }
+
+    &:hover {
+        // background-color: darken( $secondary, $theme-color-interval );
+        background-color: $secondary;
+    }
+
+    &:not(.wp-element-button) {
+        font-size: $font-size-base;
+    }
+
+    .wp-block-file__button {
+        @extend .stretched-link;
+        border: $btn-border-width solid;
+    }
+}
+
+.wp-block-media-text {
+
+    .wp-block-media-text__content {
+        padding: $spacer * 3 8%;
     }
 }

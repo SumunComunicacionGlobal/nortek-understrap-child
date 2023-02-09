@@ -104,11 +104,22 @@
     }
 }
 
-.carrusel-post {
+.carrusel-post,
+.is-style-slick-carousel .slick-slide > .wp-block-group__inner-container,
+.is-style-border-left {
     border-left: 1px solid $primary;
 
     .wp-block-buttons {
         justify-content: flex-start !important;
+    }
+}
+
+.is-style-slick-carousel .slick-slide,
+.carrusel-post,
+.is-style-border-left {
+    
+    > .wp-block-group__inner-container {
+        @extend .px-2;
     }
 }
 
@@ -147,5 +158,12 @@
 
     &:hover:before {
         right: $btn-padding-x * .5;
+    }
+}
+
+.filter-navbar {
+
+    .navbar-nav {
+        gap: $spacer;
     }
 }

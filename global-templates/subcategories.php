@@ -33,12 +33,16 @@ if ( $terms ) { ?>
 
 				<div class="position-relative">
 
-					<div class="row">
+					<div class="row subcategory-row">
 
-						<div class="col-md-6 col-lg-4 mb-2 mb-lg-0">
+						<div class="col-md-6 col-lg-4 mb-2 mb-lg-0 pr-0 subcategory-archive-image-column">
 
 							<?php $thumbnail_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
-							echo wp_get_attachment_image( $thumbnail_id, 'medium_large', false, array( 'class' => 'subcategory-archive-image' ) );
+							if ( $thumbnail_id ) {
+								echo wp_get_attachment_image( $thumbnail_id, 'medium_large', false, array( 'class' => 'subcategory-archive-image' ) );
+							} else {
+								echo '<div class="subcategory-archive-image has-primary-60-background-color h-100"></div>';
+							}
 							?>
 
 						</div>

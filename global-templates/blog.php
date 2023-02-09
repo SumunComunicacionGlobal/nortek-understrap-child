@@ -21,7 +21,7 @@ if ( $q->have_posts() ) {
 
 			<?php while ( $q->have_posts() ) { $q->the_post(); ?>
 
-				<div class="col-sm-6 col-lg-4 mb-3 stretch-linked-block">
+				<div class="col-sm-6 col-lg-4 stretch-linked-block">
 
 					<?php get_template_part( 'loop-templates/content', 'card' ); ?>
 

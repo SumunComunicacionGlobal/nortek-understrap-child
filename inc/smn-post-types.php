@@ -222,6 +222,7 @@ function custom_post_type_caso_de_exito() {
 	$args = array(
 		'label'                 => __( 'Casos de éxito', 'smn' ),
 		'labels'                => $labels,
+		'description'			=> __( 'Descubre cómo importantes empresas como Repsol, Hyundai Steel o ArcelorMittal, han alcanzado los objetivos marcados en sus plantas de producción, gracias a nuestras soluciones específicamente diseñadas y fabricadas para cada uno de ellos.', 'nortek' ),
 		'supports'              => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes' ),
 		'hierarchical'          => false,
 		'public'                => true,

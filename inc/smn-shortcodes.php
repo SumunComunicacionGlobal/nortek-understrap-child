@@ -353,6 +353,15 @@ function sumun_shortcode_casos_de_exito() {
 }
 add_shortcode( 'casos_de_exito', 'sumun_shortcode_casos_de_exito' );
 
+function sumun_shortcode_casos_de_exito_panel() {
+	ob_start();
+	get_template_part( 'global-templates/casos-de-exito-panel' );
+	$r = ob_get_clean();
+
+	return $r;
+}
+add_shortcode( 'casos_de_exito_panel', 'sumun_shortcode_casos_de_exito_panel' );
+
 function sumun_shortcode_slider() {
 	ob_start();
 	get_template_part( 'global-templates/slider' );
