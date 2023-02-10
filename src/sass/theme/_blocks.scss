@@ -40,10 +40,6 @@ body.understrap-no-sidebar {
 .wp-block-cover {
     padding: $spacer * 2;
 
-    &.is-style-image-header {
-        min-height: 560px;
-    }
-
     &.is-style-full-height-content {
         align-items: stretch;
 
@@ -53,6 +49,12 @@ body.understrap-no-sidebar {
             justify-content: space-between;
         }
     }
+
+    // @include media-breakpoint-up(lg) {
+    //     &.is-style-image-header {
+    //         min-height: 560px;
+    //     }
+    // }
 }
 
 .btn,
@@ -366,7 +368,7 @@ body.understrap-no-sidebar {
     position: relative;
     background-color: $white;
     z-index: 1;
-    margin-bottom: $spacer;
+    margin-bottom: $spacer * 2;
 
     .toc-links {
         flex-grow: 1;
@@ -379,6 +381,7 @@ body.understrap-no-sidebar {
 
         .btn {
             border-radius: 0;
+            white-space: normal;
             @include media-breakpoint-up(lg) {
                 font-size: $font-size-sm;
             }

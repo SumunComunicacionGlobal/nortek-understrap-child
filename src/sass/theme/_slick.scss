@@ -54,8 +54,8 @@
 	.slick-prev,
 	.slick-next {
 		top: calc(100% + 1px);
-		width: 7rem;
-		height: 7rem;
+		width: 4rem;
+		height: 4rem;
 		background-color: $primary;
 
 		&:hover,
@@ -76,7 +76,18 @@
 	}
 
 	.slick-prev {
-		right: calc( 7rem + 1px );
+		right: calc( 4rem + 1px );
+	}
+
+	@include media-breakpoint-up(sm) {
+		.slick-prev,
+		.slick-next {
+			width: 7rem;
+			height: 7rem;	
+		}
+		.slick-prev {
+			right: calc( 7rem + 1px );
+		}
 	}
 
 }
@@ -127,10 +138,10 @@
 	&.slider-home {
 		background-color: $white;
 		color: $body-color;
-		padding-left: 7rem;
+		padding-left: 4rem;
 
 		.slide {
-			padding: $spacer $spacer $spacer $spacer * 3;
+			padding: $spacer $spacer $spacer $spacer;
 		}
 
 		.slick-prev,
@@ -140,13 +151,26 @@
 		}
 
 		.slick-prev {
-			top: calc(7rem + 1px);
+			top: calc(4rem + 1px);
 		}
 
 		.wp-post-image,
 		.wp-post-image img {
 			height: 12rem;
 			object-fit: cover;
+		}
+
+		@include media-breakpoint-up(sm) {
+			padding-left: 7rem;
+
+			.slide {
+				padding-left: $spacer * 3;
+			}
+
+			.slick-prev {
+				top: calc(7rem + 1px);
+			}
+	
 		}
 
 	}

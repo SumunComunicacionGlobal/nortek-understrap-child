@@ -13,11 +13,12 @@ defined( 'ABSPATH' ) || exit;
 
 				<?php smn_breadcrumb(); ?>
 
-				<div class="row">
+				<div class="row align-items-center">
 
 					<div class="col-md-6 mb-2 text-center">
 
-						<?php the_post_thumbnail( 'medium_large' ); ?>
+						<?php get_template_part( 'product-templates/product-gallery' ); ?>
+						<?php //the_post_thumbnail( 'medium_large' ); ?>
 					
 					</div>
 
