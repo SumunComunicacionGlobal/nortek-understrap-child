@@ -394,7 +394,7 @@ if ( ! function_exists( 'product_tag_function' ) ) {
 
 	}
 	// Hook into the 'init' action
-	add_action( 'init', 'product_tag_function', 0 );
+	// add_action( 'init', 'product_tag_function', 0 );
 
 }
 

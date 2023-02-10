@@ -10658,6 +10658,14 @@ body.breadcrumb-bg-light .breadcrumb {
 .subcategory .card-body {
   min-height: 120px;
 }
+.subcategory .subcategory-archive-image {
+  background-image: url("../img/nortek-placeholder.png");
+  background-size: cover;
+  background-position: center;
+}
+.subcategory .subcategory-archive-image.has-not-image {
+  opacity: 0.2;
+}
 .subcategory .subcategory-archive-image *,
 .subcategory img.subcategory-archive-image {
   height: 100%;

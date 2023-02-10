@@ -41,7 +41,7 @@ if ( $terms ) { ?>
 							if ( $thumbnail_id ) {
 								echo wp_get_attachment_image( $thumbnail_id, 'medium_large', false, array( 'class' => 'subcategory-archive-image' ) );
 							} else {
-								echo '<div class="subcategory-archive-image has-primary-60-background-color h-100"></div>';
+								echo '<div class="subcategory-archive-image has-not-image has-primary-60-background-color h-100"></div>';
 							}
 							?>
 

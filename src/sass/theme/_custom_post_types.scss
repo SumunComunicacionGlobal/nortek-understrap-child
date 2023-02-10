@@ -105,6 +105,15 @@
         min-height: 120px;
     }
     
+    .subcategory-archive-image {
+        background-image: url('../img/nortek-placeholder.png');
+        background-size: cover;
+        background-position: center;
+
+        &.has-not-image {
+            opacity: .2;
+        }
+    }
     .subcategory-archive-image *,
     img.subcategory-archive-image {
         // height: 200px;

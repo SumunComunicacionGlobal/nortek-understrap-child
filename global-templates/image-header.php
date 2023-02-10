@@ -6,7 +6,7 @@ defined( 'ABSPATH' ) || exit;
 $image_id = false;
 $title = '';
 $description = '';
-$bg_class = 'has-primary-background-color has-background-dim-100';
+$bg_class = 'has-primary-100-background-color has-background-dim-90';
 
 if ( is_singular() ) {
 	$image_id = get_post_thumbnail_id( get_the_ID() );
@@ -34,7 +34,11 @@ if ( is_singular() ) {
 
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim <?php echo $bg_class; ?>"></span>
 
-	<?php echo wp_get_attachment_image( $image_id, 'large', false, array('class' => 'wp-block-cover__image-background') ); ?>
+	<?php if ( $image_id ) {
+		echo wp_get_attachment_image( $image_id, 'large', false, array('class' => 'wp-block-cover__image-background') );
+	 } else {
+		echo '<img class="wp-block-cover__image-background" src="'.get_stylesheet_directory_uri(  ).'/img/industria-placeholder.jpg" alt="'.get_the_title().'" />';
+	 } ?>
 
 	<div class="wp-block-cover__inner-container">
 
