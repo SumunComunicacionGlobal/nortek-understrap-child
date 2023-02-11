@@ -37,7 +37,7 @@ $post_type = get_post_type();
 				} ?>
 
 				<?php if ( is_tax() ) {
-					echo get_term_meta( get_queried_object_id(), 'secondary_description', true );
+					echo get_field( 'secondary_description', get_queried_object());
 					get_template_part( 'global-templates/content-fragments', '', array('post_ids' => get_term_meta( get_queried_object_id(), 'top_fragments', true ) ) );
 				} ?>
 
@@ -82,7 +82,7 @@ $post_type = get_post_type();
 
 				<?php if ( is_tax() ) {
 					get_template_part( 'global-templates/content-fragments', '', array('post_ids' => get_term_meta( get_queried_object_id(), 'bottom_fragments', true ) ) );
-					echo get_term_meta( get_queried_object_id(), 'terciary_description', true ); 
+					echo get_field( 'terciary_description', get_queried_object());
 				} ?>
 
 			</main><!-- #main -->

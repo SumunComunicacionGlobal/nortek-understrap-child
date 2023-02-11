@@ -29,7 +29,7 @@ if ( $terms ) { ?>
 
 		<?php foreach ( $terms as $key => $term ) { ?>
 
-			<div class="subcategory mb-3" id="<?php echo $term->slug; ?>">
+			<div class="subcategory mb-3 pb-3 pb-lg-0" id="<?php echo $term->slug; ?>">
 
 				<div class="position-relative">
 

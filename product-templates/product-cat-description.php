@@ -25,7 +25,7 @@ if ( $pdf ) {
 
 		<div class="row align-items-center">
 
-			<div class="col-md-6">
+			<div class="col-md-6 mb-3 mb-md-0">
 
 				<?php echo $description; ?>
 			
