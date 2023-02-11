@@ -9777,11 +9777,6 @@ body.understrap-no-sidebar .alignwide {
 .wp-block-columns.is-style-gapless, .wp-block-columns.is-style-gapless-border {
   gap: 0;
 }
-@media (min-width: 782px) {
-  .wp-block-columns.is-style-gapless, .wp-block-columns.is-style-gapless-border {
-    margin-bottom: 0;
-  }
-}
 .wp-block-columns.is-style-gapless-border > .wp-block-column {
   border: 1px solid #cdcdcd;
   padding: 3rem 2rem;
