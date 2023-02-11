@@ -211,10 +211,10 @@ body.understrap-no-sidebar {
 
     &.is-style-gapless,
     &.is-style-gapless-border {
-        //@include media-breakpoint-up(md) {
             gap: 0;
+        @include media-breakpoint-up(md) {
             margin-bottom: 0;
-        //}
+        }
     }
 
     &.is-style-gapless-border {
