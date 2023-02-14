@@ -134,9 +134,9 @@ function cargar_sidebar( $valor ) {
 
     $valor = 'none';
 
-    if ( is_singular( 'post' ) ) {
-        // $valor = 'right';
-    }
+    // if ( is_singular( 'post' ) ) {
+    //     $valor = 'right';
+    // }
 
     return $valor;
 

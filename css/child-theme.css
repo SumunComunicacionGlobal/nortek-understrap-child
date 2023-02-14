@@ -9472,6 +9472,17 @@ ul.wp-block-list li {
   padding-left: 3rem;
   min-height: 2rem;
 }
+ul.wp-block-list.list-unstyled li {
+  background: none;
+  padding-left: 0;
+  min-height: unset;
+  border-bottom: 1px solid #cdcdcd;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+ul.wp-block-list.list-unstyled li:first-child {
+  border-top: 1px solid #cdcdcd;
+}
 
 h2, .h2 {
   font-weight: 700;
@@ -9508,7 +9519,7 @@ blockquote,
   line-height: 1.2;
 }
 
-.entry-title {
+body:not(.single-case-study) .entry-title {
   max-width: 600px;
 }
 
@@ -9568,7 +9579,7 @@ blockquote,
 }
 
 @media (min-width: 1280px) {
-  h1.entry-title {
+  body:not(.single-case-study) h1.entry-title {
     font-size: 3.75rem;
   }
 }
@@ -10048,12 +10059,12 @@ table th {
   height: auto;
 }
 .wpcf7 input[type=checkbox] {
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   background-color: white;
-  border-radius: 50%;
+  border-radius: 0.5rem;
   vertical-align: middle;
-  border: 1px solid #393939;
+  border: 2px solid #393939;
   margin-right: 0.5rem;
   -moz-appearance: none;
   appearance: none;
@@ -10069,6 +10080,13 @@ table th {
 }
 .wpcf7 .wpcf7-acceptance .wpcf7-list-item {
   margin-left: 0;
+}
+.wpcf7 .wpcf7-list-item > label {
+  display: flex;
+}
+.wpcf7 .wpcf7-list-item > label > input[type=checkbox] {
+  flex-basis: 1.75rem;
+  min-width: 1.75rem;
 }
 .wpcf7 input[type=submit] {
   color: #fff;
@@ -10689,6 +10707,15 @@ body.breadcrumb-bg-light .breadcrumb {
   }
 }
 
+.single-case-study .entry-content h2:not(:first-child),
+.single-case-study .entry-content h3:not(:first-child),
+.single-case-study .entry-content .timeline-item-featured .timeline-item-title:not(:first-child),
+.timeline-item-featured .single-case-study .entry-content .timeline-item-title:not(:first-child),
+.single-case-study .entry-content .links-panel-block .links-panel-featured-link .links-panel-link-excerpt:not(:first-child),
+.links-panel-block .links-panel-featured-link .single-case-study .entry-content .links-panel-link-excerpt:not(:first-child) {
+  margin-top: 4rem;
+}
+
 .widget-area .widget {
   margin-bottom: 2rem;
 }
@@ -10721,7 +10748,7 @@ body.breadcrumb-bg-light .breadcrumb {
   font-weight: 200;
 }
 
-#wrapper-footer-full #menu-footer-2 a {
+#wrapper-footer-full .wp-block-column:nth-child(n+2) .widget_nav_menu a {
   font-size: 1rem;
   font-weight: 400;
   color: #393939;

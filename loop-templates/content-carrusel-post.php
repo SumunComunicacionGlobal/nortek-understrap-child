@@ -3,7 +3,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class( 'hfeed-post carrusel-post' ); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class( 'hfeed-post carrusel-post position-relative' ); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="px-2">
 

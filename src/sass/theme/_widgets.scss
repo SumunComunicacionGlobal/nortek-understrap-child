@@ -42,7 +42,7 @@
 
 }
 
-#wrapper-footer-full #menu-footer-2 {
+#wrapper-footer-full .wp-block-column:nth-child(n+2) .widget_nav_menu {
 
 	a {
 		font-size: $font-size-base;

@@ -148,3 +148,14 @@
 
     }
 }
+
+.single-case-study {
+
+    .entry-content {
+
+        h2:not(:first-child),
+        h3:not(:first-child) {
+            margin-top: $spacer * 4;
+        }
+    }
+}

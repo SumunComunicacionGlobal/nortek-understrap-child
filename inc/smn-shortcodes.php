@@ -229,7 +229,10 @@ function sitemap() {
 		'has_archive'		=> true,
 	);
 	$pts = get_post_types( $pt_args );
-	// if (isset($pts['rl_gallery'])) unset $pts['rl_gallery'];
+
+	if ( isset($pts['rl_gallery']))
+		unset( $pts['rl_gallery'] );
+
 	$pts = array_merge( array('page'), $pts, array('post') );
 	$r = '';
 

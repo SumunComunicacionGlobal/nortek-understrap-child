@@ -31,7 +31,23 @@ ul.wp-block-list {
         min-height: 2rem;
     }
 
+    &.list-unstyled {
+
+        li {
+            background: none;
+            padding-left: 0;
+            min-height: unset;
+            border-bottom: 1px solid $border-color;
+            margin: 0;
+            padding: $spacer*.5 0;
+
+            &:first-child {
+                border-top: 1px solid $border-color;
+            }
+        }
+    }
 }
+
 
 h1, .h1 {
 
@@ -93,7 +109,7 @@ blockquote,
     line-height: $headings-line-height;
 }
 
-.entry-title {
+body:not(.single-case-study) .entry-title {
     max-width: 600px;
 }
 
@@ -168,7 +184,7 @@ blockquote,
 
 @include media-breakpoint-up(xl) {
     
-    h1.entry-title {
+    body:not(.single-case-study) h1.entry-title {
         font-size: $font-size-base * 3.75;
     }
 }

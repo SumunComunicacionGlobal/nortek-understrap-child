@@ -9,6 +9,10 @@ add_post_type_support( 'page', 'excerpt' );
     // register_taxonomy_for_object_type('category', 'page');  
 // }
 
+function smn_unregister_post_type(){
+	unregister_post_type( 'rl_gallery' );
+}
+add_action('init','smn_unregister_post_type');
 
 if ( ! function_exists('custom_post_type_slide') ) {
 
