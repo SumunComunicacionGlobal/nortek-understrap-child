@@ -135,3 +135,73 @@ function nortek_term_template_part( $term = false ) {
     </div>
 
 <?php }
+
+function smn_get_product_files_list() {
+
+    $product_serie = get_post_meta( get_the_ID(), 'product_serie', true );
+    $label_color = 'lightblue';
+    if ( !$product_serie ) $label_color = 'red';
+    echo '<p>';
+        echo '<span style="background-color:'.$label_color.';padding:4px 6px;border-radius:3px;">';
+            echo '<b>'.__( 'Serie', 'nortek' ).':</b>';
+            if ( $product_serie ) {
+                echo $product_serie;
+            } else {
+                echo '<span class="dashicons dashicons-warning" style="color:white;"></span> <span style="color:white;">' . __( 'Vacío', 'nortek' ) . '</span>';
+            }
+        echo '</span>';
+    echo '</p>';
+
+    $repeater_fields = array(
+        'product_files_pdf',
+        'product_files_3d'
+    );
+
+    echo '<div style="padding: 4px 6px; border:1px solid lightgray; border-radius: 4px;margin-bottom:.5rem;">';
+    echo '<div><b>'. __( 'Ficheros PDF y 3D', 'nortek').'</b></div>';
+    echo '<ul style="line-height:1;margin-top:4px;">';
+
+    foreach ( $repeater_fields as $rf ) {
+
+        if ( have_rows( $rf )) {
+
+            while ( have_rows( $rf ) ) { the_row();
+
+                $file_id = get_sub_field( 'product_file');
+                if ( $file_id ) {
+                    $file_url = wp_get_attachment_url( $file_id );
+                    echo '<li><a href="'.wp_get_attachment_url( $file_id ).'" target="_blank" style="font-size:11px;">'. basename($file_url) .'</a></li>';
+                } else {
+                    echo '<span class="dashicons dashicons-warning" style="color:red;"></span> <span style="color:lightgray;">' . __( 'Vacíos', 'nortek' ) . '</span>';
+                }
+            }
+
+        }
+
+    }
+    
+    echo '</ul>';
+    echo '</div>';
+    
+    $related_products_text = get_post_meta( get_the_ID(), 'related_products_text', true );
+    $related_products = get_post_meta( get_the_ID(), 'related_products', true );
+
+    if ( $related_products_text || $related_products ) {
+        echo '<div style="padding: 4px 6px; border:1px solid lightgray; border-radius: 4px;margin-bottom:.5rem;">';
+        echo '<div><b>'. __( 'Productos relacionados', 'nortek').'</b></div>';
+    
+        if ( $related_products_text ) {
+            echo '<div style="font-size:12px;">'.$related_products_text.'</div>';
+        }
+        if ( $related_products ) {
+            echo '<ul style="line-height:1;margin-top:4px;">';
+            foreach ( $related_products as $p_id ) {
+                echo '<li><a href="'.get_the_permalink( $p_id ).'" target="_blank" style="font-size:11px;">'. get_the_title($p_id) .'</a></li>';
+            }
+            echo '</ul>';
+        }
+
+        echo '</div>';
+    }
+
+}

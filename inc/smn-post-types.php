@@ -509,12 +509,13 @@ add_filter( 'enter_title_here', 'wpb_change_title_text' );
 // ADD NEW COLUMN
 add_filter('manage_posts_columns', 'smn_columns_head');
 add_filter('manage_pages_columns', 'smn_columns_head');
-add_action('manage_posts_custom_column', 'smn_columns_content', 10, 2);
+add_action('manage_posts_custom_column', 'smn_columns_content', 10000, 2);
 add_action('manage_pages_custom_column', 'smn_columns_content', 10, 2);
 function smn_columns_head($defaults) {
 	// $defaults = array('featured_image' => 'Imagen') + $defaults;
-    $defaults['featured_image'] = 'Imagen';
+    // $defaults['featured_image'] = 'Imagen';
     $defaults['extracto'] = 'Resumen';
+    $defaults['data'] = 'Datos';
 
     return $defaults;
 }
@@ -527,8 +528,15 @@ function smn_columns_content($column_name, $post_ID) {
     }
     if ($column_name == 'extracto') {
     	$post = get_post($post_ID);
-    	echo $post->post_excerpt;
+		echo '<div style="font-size:12px;line-height:1.2;">';
+    		echo $post->post_excerpt;
+		echo '</div>';
     }
+	if ($column_name == 'data') {
+
+		smn_get_product_files_list();
+		
+	}
 }
 
 add_filter( 'post_type_archive_link', 'custom_page_archive_link', 100, 2 );
