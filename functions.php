@@ -205,3 +205,33 @@ function smn_get_product_files_list() {
     }
 
 }
+
+function smn_get_first_product_image_id( $term_id = false ) {
+
+    if ( !$term_id ) $term_id = get_queried_object_id();
+    if ( !$term_id ) return false;
+
+    $args = array(
+        'post_type'         => 'product',
+        'posts_per_page'    => 1,
+        'orderby'           => 'menu_order',
+        'order'             => 'asc',
+        'fields'            => 'ids',
+        'tax_query'         => array( array(
+                                    'taxonomy'      => 'product_cat',
+                                    'terms'         => array( $term_id )
+                                ) ),
+    );
+
+    $first_post_q = new WP_Query($args);
+
+    if ( $first_post_q->have_posts() ) {
+        
+        $first_post_id = $first_post_q->posts[0];
+        return get_post_thumbnail_id( $first_post_id );
+
+    }
+
+    return false;
+
+}
