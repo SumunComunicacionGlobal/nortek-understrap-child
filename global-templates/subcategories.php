@@ -37,22 +37,26 @@ if ( $terms ) { ?>
 
 						<div class="col-md-6 col-lg-4 mb-2 mb-lg-0 pr-0 subcategory-archive-image-column">
 
-							<?php $thumbnail_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
+							<div class="subcategory-archive-image-wrapper">
 
-							if ( !$thumbnail_id ) {
-								$thumbnail_id = smn_get_first_product_image_id( $term->term_id );
-							}
+								<?php $thumbnail_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
 
-							if ( $thumbnail_id ) {
+								if ( !$thumbnail_id ) {
+									$thumbnail_id = smn_get_first_product_image_id( $term->term_id );
+								}
 
-								echo wp_get_attachment_image( $thumbnail_id, 'medium_large', false, array( 'class' => 'subcategory-archive-image' ) );
-						
-							} else {
-								
-								echo '<div class="subcategory-archive-image has-not-image has-primary-60-background-color h-100"></div>';
-								
-							}
-							?>
+								if ( $thumbnail_id ) {
+
+									echo wp_get_attachment_image( $thumbnail_id, 'medium_large', false, array( 'class' => 'subcategory-archive-image' ) );
+							
+								} else {
+									
+									echo '<div class="subcategory-archive-image has-not-image has-primary-60-background-color h-100"></div>';
+									
+								}
+								?>
+
+							</div>
 
 						</div>
 

@@ -515,9 +515,15 @@ function smn_columns_head($defaults) {
 	// $defaults = array('featured_image' => 'Imagen') + $defaults;
     // $defaults['featured_image'] = 'Imagen';
     $defaults['extracto'] = 'Resumen';
-    $defaults['data'] = 'Datos';
 
     return $defaults;
+}
+
+add_filter( 'manage_product_posts_columns', 'smn_products_columns_head' );
+function smn_products_columns_head($defaults) {
+    $defaults['data'] = 'Datos';
+
+	return $defaults;
 }
  
 // SHOW THE FEATURED IMAGE

@@ -122,6 +122,7 @@
             opacity: .2;
         }
     }
+    .subcategory-archive-image-wrapper,
     .subcategory-archive-image *,
     img.subcategory-archive-image {
         // height: 200px;
@@ -129,11 +130,28 @@
         object-fit: cover;
     }
 
+
+    .subcategory-archive-image-wrapper {
+        position: relative;
+        
+        &:after {
+            content: "";
+            position: absolute;
+            background-color: rgba( $black, .05);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
     // .subcategory-archive-image *,
     // img.subcategory-archive-image,
     .subcategory-archive-image-column {
         clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
         min-height: 200px;
+
+
     }
 
 }

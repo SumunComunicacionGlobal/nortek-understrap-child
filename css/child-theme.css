@@ -10689,11 +10689,24 @@ body.breadcrumb-bg-light .breadcrumb {
 .subcategory .subcategory-archive-image.has-not-image {
   opacity: 0.2;
 }
+.subcategory .subcategory-archive-image-wrapper,
 .subcategory .subcategory-archive-image *,
 .subcategory img.subcategory-archive-image {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+.subcategory .subcategory-archive-image-wrapper {
+  position: relative;
+}
+.subcategory .subcategory-archive-image-wrapper:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(10, 11, 11, 0.05);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .subcategory .subcategory-archive-image-column {
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
