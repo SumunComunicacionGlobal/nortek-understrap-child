@@ -1,6 +1,6 @@
 .breadcrumb {
     @extend .alignfull;
-    padding-bottom: $spacer * 3 !important;
+    // padding-bottom: $spacer * 3 !important;
 
     .breadcrumb-inner {
         @include make-container();

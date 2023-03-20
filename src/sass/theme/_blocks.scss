@@ -25,7 +25,7 @@ body.understrap-no-sidebar {
 
 #main > article > .entry-content > *:first-child,
 #main > .wp-block-cover:first-child {
-    padding-top: 10rem !important;
+    padding-top: 8rem !important;
 }
 
 .wp-block-group, 
@@ -33,7 +33,8 @@ body.understrap-no-sidebar {
 
 	&.alignfull, 
     &.alignwide {
-		padding: $grid-gutter-width * 2 0;
+		// padding: $grid-gutter-width * 2 0;
+		padding: $grid-gutter-width 0;
 	}
 }
 
@@ -48,6 +49,10 @@ body.understrap-no-sidebar {
             flex-direction: column;
             justify-content: space-between;
         }
+    }
+
+    &.is-style-image-header {
+        min-height: 360px;
     }
 
     // @include media-breakpoint-up(lg) {
@@ -260,7 +265,7 @@ body.understrap-no-sidebar {
 	border-radius: $border-radius-lg;
 	border: 5px solid $white;
 	box-shadow: $box-shadow-lg;
-    padding: $spacer*3 $spacer*2;
+    padding: $spacer*2 $spacer*2;
     background-image: url('../img/label.svg');
     background-position: right $spacer*2 top;
     background-repeat: no-repeat;

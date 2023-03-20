@@ -7,7 +7,27 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+?>
 
+<div class="collapse bg-light" id="search-collapse">
+
+    <div class="wrapper">
+
+        <div class="container">
+
+                <?php if ( class_exists( 'woocommerce') ) {
+                    get_product_search_form();
+                } else {
+                    get_search_form();
+                } ?>
+
+        </div>
+
+    </div>
+
+</div>
+
+<?php
 $navbar_class = 'navbar-dark';
 
 if ( is_page() ) {
@@ -85,10 +105,12 @@ if ( is_page() ) {
 				'menu_class'      => 'navbar-nav ml-auto mt-1 mt-lg-0',
 				'fallback_cb'     => '',
 				'menu_id'         => 'desktop-menu',
-				// 'depth'           => 2,
-				// 'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				'depth'           => 2,
+				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 			)
 		);
 		?>
+
+		<a class="top-bar-search-button mr-2" href="#search-collapse" data-toggle="collapse" title="<?php echo __( 'Search' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/search.svg" alt="<?php echo __( 'Search' ); ?>" width="20" height="20"></a>
 
 </nav><!-- .site-navigation -->

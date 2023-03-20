@@ -12,7 +12,7 @@
 }
 
 .wrapper {
-	padding: $grid-gutter-width*2 0;
+	// padding: $grid-gutter-width*2 0;
 }
 
 #wrapper-navbar + .wrapper {
@@ -121,6 +121,14 @@
     > .wp-block-group__inner-container {
         @extend .px-2;
     }
+}
+
+.carrusel-post-img img {
+    margin-bottom: $spacer;
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .list-group {

@@ -8,7 +8,8 @@ $images = get_field( $field_name );
 
 if ( !$images ) return false;
 
-$label = get_field_object( $field_name )['label'];
+// $label = get_field_object( $field_name )['label'];
+$label = __( 'Plano dimensional', 'nortek' );
 
 ?>
 

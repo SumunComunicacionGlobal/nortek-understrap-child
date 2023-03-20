@@ -8,7 +8,8 @@ $content = get_field( $field_name );
 
 if ( !$content ) return false;
 
-$label = get_field_object( $field_name )['label'];
+// $label = get_field_object( $field_name )['label'];
+$label = __( 'Especificaciones', 'nortek' );
 
 ?>
 

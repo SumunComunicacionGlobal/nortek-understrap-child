@@ -41,18 +41,20 @@ if ( $terms ) { ?>
 
 								<?php $thumbnail_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
 
-								if ( !$thumbnail_id ) {
-									$thumbnail_id = smn_get_first_product_image_id( $term->term_id );
-								}
-
 								if ( $thumbnail_id ) {
 
-									echo wp_get_attachment_image( $thumbnail_id, 'medium_large', false, array( 'class' => 'subcategory-archive-image' ) );
-							
+									echo wp_get_attachment_image( $thumbnail_id, 'medium_large', false, array( 'class' => 'subcategory-archive-image has-icon-image' ) );
+
 								} else {
-									
-									echo '<div class="subcategory-archive-image has-not-image has-primary-60-background-color h-100"></div>';
-									
+
+									// echo '<div class="subcategory-archive-image has-not-image has-primary-60-background-color h-100 w-100"></div>';
+
+									$thumbnail_id = smn_get_first_product_image_id( $term->term_id );
+									if ( $thumbnail_id) {
+										echo wp_get_attachment_image( $thumbnail_id, 'medium_large', false, array( 'class' => 'subcategory-archive-image has-product-image h-100 w-100' ) );
+									} else {
+										echo '<div class="subcategory-archive-image has-not-image has-primary-60-background-color h-100 w-100"></div>';
+									}
 								}
 								?>
 
@@ -86,73 +88,9 @@ if ( $terms ) { ?>
 
 				</div>
 
-				<?php
-					$subterms = get_terms( array( 
-						'taxonomy' 		=> 'product_cat', 
-						'parent' 		=> $term->term_id, 
-						'hide_empty' 	=> false,
-					) );
+				<?php // smn_subterms_buttons( $term ); ?>
 
-					if ( !$subterms ) {
-						$subterms = array( $term );
-					}
-
-					foreach( $subterms as $term )  {
-
-						$args = array(
-							'post_type'			=> 'product',
-							'posts_per_page'	=> -1,
-							'add_row'			=> true,
-							'tax_query'			=> array( array(
-													'taxonomy'			=> 'product_cat',
-													'terms'				=> array( $term->term_id ),
-													'include_children'	=> false,
-													)),
-							// 'ignore_row'		=> true,
-						);
-
-						$q = new WP_Query( $args );
-
-						if ( $q->have_posts() ) { ?>
-
-							<h3 class="btn btn-primary btn-block btn-collapse collapsed" data-toggle="collapse" href="#<?php echo $term->slug; ?>-details" aria-expanded="false" aria-controls="<?php echo $term->slug; ?>">
-								<?php echo $term->name; ?>
-							</h3>
-
-							<div class="collapse" id="<?php echo $term->slug; ?>-details">
-
-							<div class="py-2">
-
-								<?php 
-									//$col_class = false;
-									//if ( !is_tax() ) $col_class = 'col-sm-6 col-lg-3 mb-3'; 
-								?>
-
-								<?php while ( $q->have_posts() ) { $q->the_post(); ?>
-
-									<?php //if ( $col_class ) echo '<div class="' . $col_class . '">'; ?>
-
-										<div class="<?php echo PRODUCT_COLUMNS_CLASS; ?>">
-
-											<?php get_template_part( 'loop-templates/content', 'product' ); ?>
-
-										</div>
-
-									<?php //if ( $col_class ) echo '</div>'; ?>
-
-								<?php } ?>
-
-							</div>
-
-							</div>
-
-						<?php }
-
-						wp_reset_postdata();
-
-					}
-
-				?>
+				<?php smn_subterms_collapse( $term ); ?>
 
 			</div>
 

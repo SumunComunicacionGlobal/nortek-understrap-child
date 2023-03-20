@@ -314,6 +314,15 @@ function sumun_shortcode_subcategorias() {
 }
 add_shortcode( 'subcategorias', 'sumun_shortcode_subcategorias' );
 
+function sumun_shortcode_categorias() {
+	ob_start();
+	get_template_part( 'global-templates/categories' );
+	$r = ob_get_clean();
+
+	return $r;
+}
+add_shortcode( 'categorias', 'sumun_shortcode_categorias' );
+
 function sumun_shortcode_botones_subcategorias() {
 
 	$r = '';

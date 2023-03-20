@@ -86,3 +86,104 @@ function smn_breadcrumb() {
 
 }
 
+function smn_subterms_collapse( $term ) {
+	
+	if ( !$term ) return false;
+
+	$subterms = get_terms( array( 
+		'taxonomy' 		=> 'product_cat', 
+		'parent' 		=> $term->term_id, 
+		'hide_empty' 	=> false,
+	) );
+
+	if ( !$subterms ) {
+		$subterms = array( $term );
+	}
+
+	foreach( $subterms as $term )  {
+
+		$args = array(
+			'post_type'			=> 'product',
+			'posts_per_page'	=> -1,
+			'add_row'			=> true,
+			'tax_query'			=> array( array(
+									'taxonomy'			=> 'product_cat',
+									'terms'				=> array( $term->term_id ),
+									'include_children'	=> false,
+									)),
+			// 'ignore_row'		=> true,
+		);
+
+		$q = new WP_Query( $args );
+
+		if ( $q->have_posts() ) { ?>
+
+			<h3 class="btn btn-primary btn-block btn-collapse collapsed" data-toggle="collapse" href="#<?php echo $term->slug; ?>-details" aria-expanded="false" aria-controls="<?php echo $term->slug; ?>">
+				<?php echo $term->name; ?>
+			</h3>
+
+			<div class="collapse" id="<?php echo $term->slug; ?>-details">
+
+			<div class="py-2">
+
+				<?php 
+					//$col_class = false;
+					//if ( !is_tax() ) $col_class = 'col-sm-6 col-lg-3 mb-3'; 
+				?>
+
+				<?php while ( $q->have_posts() ) { $q->the_post(); ?>
+
+					<?php //if ( $col_class ) echo '<div class="' . $col_class . '">'; ?>
+
+						<div class="<?php echo PRODUCT_COLUMNS_CLASS; ?>">
+
+							<?php get_template_part( 'loop-templates/content', 'product' ); ?>
+
+						</div>
+
+					<?php //if ( $col_class ) echo '</div>'; ?>
+
+				<?php } ?>
+
+			</div>
+
+			</div>
+
+		<?php }
+
+		wp_reset_postdata();
+
+	}
+
+}
+
+function smn_subterms_buttons( $term ) {
+
+	if ( !$term ) return false;
+
+	$subterms = get_terms( array( 
+		'taxonomy' 		=> 'product_cat', 
+		'parent' 		=> $term->term_id, 
+		'hide_empty' 	=> false,
+	) );
+
+	if ( $subterms ) { ?>
+
+		<div class="subterms-buttons py-2">
+
+		<?php foreach( $subterms as $term )  { ?>
+
+				<a class="btn btn-sm btn-outline-primary mr-1 mb-1" href="<?php echo get_term_link( $term ); ?>" title="<?php echo $term->name; ?>">
+					<?php echo $term->name; ?>
+				</a>
+
+			<?php
+			wp_reset_postdata();
+
+		} ?>
+
+		</div>
+
+	<?php }
+
+}

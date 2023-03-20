@@ -107,7 +107,7 @@
         transition: $transition-base;
       }
 
-      &:hover:after {
+      &:not([href="#"]):hover:after {
         background-color: $secondary-100;
       }
 
@@ -159,11 +159,18 @@
       padding-left: 0;
       white-space: normal;
 
-      &:hover,
-      &:focus {
-          background-color: transparent;
-          text-decoration: underline;
-          color: $secondary;
+      &[href="#"] {
+        cursor: default;
+      }
+
+      &:not([href="#"]) {
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            text-decoration: underline;
+            color: $secondary;
+        }
       }
   }
 

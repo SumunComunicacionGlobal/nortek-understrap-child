@@ -60,6 +60,11 @@ function bootstrap_post_class( $classes, $class, $post_id ) {
     //     return $classes;
     // }
 
+    if ( is_search() ) {
+        $classes[] = 'col-sm-6 col-lg-4 mb-3 stretch-linked-block'; 
+        return $classes;
+    }
+
     if ( 'product' == get_post_type() ) return $classes;
     if ( 'case-study' == get_post_type() ) return $classes;
 

@@ -18,6 +18,7 @@ if ( is_singular() ) {
 	$image_id = get_term_meta( get_queried_object_id(), 'thumbnail_id', true );
 	$title = get_the_archive_title();
 	if( is_tax( 'product_cat' ) ) {
+		$image_id = false;
 		$description = false;
 	} elseif( is_tax() ) {
 		$description = term_description();

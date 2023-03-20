@@ -24,11 +24,23 @@ ul.wp-block-list {
     padding-left: 0;
 
     li {
+        position: relative;
         margin-bottom: $spacer;
-        background: url('../img/icono-check-circulo.svg') no-repeat left top transparent;
         list-style-type: none;
         padding-left: 3rem;
-        min-height: 2rem;
+        min-height: 1.5rem;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url('../img/icono-check-circulo.svg') no-repeat center center transparent;
+            background-size: 1.5rem auto;
+            position: absolute;
+            left: 1rem;
+            top: -1px;
+        }
     }
 
     &.list-unstyled {
@@ -121,22 +133,22 @@ body:not(.single-case-study) .entry-title {
     }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
     
     h1, .h1 {
-        font-size: 2.75rem;
+        // font-size: 2.75rem;
     }
     
     h2, .h2 {
-        font-size: 2.25rem;
+        // font-size: 2.25rem;
     }
     
     h3, .h3 {
-        font-size: 2.25rem;
+        // font-size: 2.25rem;
     }
     
     h4, .h4 {
-        font-size: 1.875rem;
+        // font-size: 1.875rem;
     }
 
     h5, .h5 {
@@ -185,6 +197,6 @@ body:not(.single-case-study) .entry-title {
 @include media-breakpoint-up(xl) {
     
     body:not(.single-case-study) h1.entry-title {
-        font-size: $font-size-base * 3.75;
+        font-size: $font-size-base * 2.75;
     }
 }

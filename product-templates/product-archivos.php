@@ -4,18 +4,16 @@
 defined( 'ABSPATH' ) || exit;
 
 $field_names = array( 
-	'product_files_3d',
-	'product_files_pdf'
+	'product_files_3d'		=> __( 'Ficheros 3D', 'nortek' ),
+	'product_files_pdf'		=> __( 'Ficheros PFD', 'nortek' ),
 );
 ?>
 
 <div id="downloads"></div>
 
-<?php foreach ( $field_names as $field_name ) {
+<?php foreach ( $field_names as $field_name => $label ) {
 
 	if ( have_rows( $field_name ) ) {
-
-		$label = get_field_object( $field_name )['label'];
 		?>
 
 		<div class="col-lg-6">

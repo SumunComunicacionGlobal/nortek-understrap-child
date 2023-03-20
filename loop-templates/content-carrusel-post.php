@@ -7,6 +7,8 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="px-2">
 
+		<?php the_post_thumbnail( 'medium', array( 'class' => 'carrusel-post-img' ) ); ?>
+
 		<header class="entry-header">
 
 			<?php if ( 'post' === get_post_type() ) : ?>

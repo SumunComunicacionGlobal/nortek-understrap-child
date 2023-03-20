@@ -4,7 +4,7 @@
 	.slick-prev,
 	.slick-next {
 		z-index: 1;
-		top: 0;
+		// top: 0;
 		width: 3rem;
 		height: 3rem;
 		transform: none;
@@ -37,8 +37,9 @@
 	}
 
 	.slick-prev {
-		left: unset;
-		right: calc( 3rem + 1px );
+		// left: unset;
+		// right: calc( 3rem + 1px );
+		left: 0;
 		transform: rotate(180deg);
 	}
 
@@ -142,6 +143,7 @@
 
 		.slide {
 			padding: $spacer $spacer $spacer $spacer;
+			min-height: 14rem;
 		}
 
 		.slick-prev,
@@ -173,9 +175,34 @@
 	
 		}
 
+		&.arrows-right-slider {
+			padding-left: 0;
+			padding-right: 4rem;
+
+			.slick-prev,
+			.slick-next {
+				left: unset;
+				right: 0;
+			}
+
+			@include media-breakpoint-up(sm) {
+				padding-right: 7rem;
+	
+				.slide {
+					padding-right: $spacer * 3;
+				}
+	
+			}
+
+		}
+	
 	}
 }
 
 .slick-carrusel-posts {
 
+}
+
+.slick-product-gallery {
+	padding: 0 3rem;
 }

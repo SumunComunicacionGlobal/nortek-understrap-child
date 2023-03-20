@@ -71,6 +71,8 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- .entry-content -->
 
+	<?php get_template_part( 'global-templates/related-posts' ); ?>
+
 	<footer class="entry-footer">
 
 		<?php understrap_entry_footer(); ?>

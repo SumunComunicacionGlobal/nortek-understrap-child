@@ -7,11 +7,12 @@ $field_name = 'product_order_info';
 $content = get_field( $field_name );
 ?>
 
-<div class="col-lg-6">
+<div class="col-12">
 
 	<?php if ( $content ) {
 
-		$label = get_field_object( $field_name )['label'];
+		// $label = get_field_object( $field_name )['label'];
+		$label = __( 'Información para el pedido', 'nortek' );
 		?>
 
 		<div class="wrapper" id="order-info">
@@ -29,7 +30,8 @@ $content = get_field( $field_name );
 
 	if ( $content ) {
 
-		$label = get_field_object( $field_name )['label'];
+		// $label = get_field_object( $field_name )['label'];
+		$label = __( 'Accesorios', 'nortek' );
 		?>
 
 		<div class="wrapper" id="accesories">

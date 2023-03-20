@@ -4,30 +4,16 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div <?php post_class( 'slide-home' ); ?> id="post-<?php the_ID(); ?>">
+<div <?php post_class( 'slide-home d-flex flex-column justify-content-center' ); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="row align-items-center">
+	<?php the_title( '<p class="h5 entry-title">', '</p>' ); ?>
 
-		<div class="col-md-6 mb-2">
+	<?php the_content(); ?>
 
-			<?php the_title( '<p class="h4 entry-title">', '</p>' ); ?>
+	<footer class="entry-footer">
 
-			<?php the_content(); ?>
+		<?php understrap_edit_post_link(); ?>
 
-			<footer class="entry-footer">
-
-				<?php understrap_edit_post_link(); ?>
-
-			</footer><!-- .entry-footer -->
-
-		</div>
-
-		<div class="col-md-6">
-	
-			<?php the_post_thumbnail( 'medium_large' ); ?>
-
-		</div>
-
-	</div>
+	</footer><!-- .entry-footer -->
 
 </div><!-- #post-## -->

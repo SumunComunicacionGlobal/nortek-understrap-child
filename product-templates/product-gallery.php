@@ -19,7 +19,7 @@ if ( !$gallery) {
 	}
 	?>
 
-	<div class="slick-slider">
+	<div class="slick-slider slick-product-gallery">
 
 		<?php foreach ( $gallery as $image_id ) { ?>
 

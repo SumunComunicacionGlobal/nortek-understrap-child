@@ -20,6 +20,26 @@ if ( $posts_ids ) {
 		'order'				=> 'ASC',
 	);
 
+} else {
+
+	$args = array(
+		'post_type'			=> 'product',
+		'orderby'			=> 'menu_order',
+		'order'				=> 'ASC',
+		'post__not_in'		=> array( get_the_ID() ),
+	);
+
+	$post_terms = wp_get_object_terms( get_the_ID(), 'product_cat', array( 'fields' => 'ids' ) );
+
+	if ( $post_terms ) {
+		$args['tax_query'] = array( array(
+			'taxonomy'		=> 'product_cat',
+			'terms'			=> $post_terms
+		));
+	}
+
+}
+
 	$q = new WP_Query($args);
 
 	if ( $q->have_posts() ) { 
@@ -56,4 +76,3 @@ if ( $posts_ids ) {
 	<?php }
 
 	wp_reset_postdata();
-}
