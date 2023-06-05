@@ -201,6 +201,21 @@
 
 .slick-carrusel-posts {
 
+	.slick-slide > .px-2 {
+		transition: all .3s ease;
+	}
+
+	.slick-active {
+
+		> .px-2 {
+			transform: translateX(2rem);
+		}
+
+		+ .slick-active > .px-2 {
+			transform: none;
+		}
+	}
+
 }
 
 .slick-product-gallery {

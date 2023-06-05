@@ -65,7 +65,15 @@
         }
     }
 
+}
+
+#desktop-menu {
+
     @include media-breakpoint-up(lg) {
+
+        .dropdown-menu {
+            top: calc(100% - 2px);
+        }
     
         .sub-menu {
             left: -999em;
@@ -75,21 +83,22 @@
                 top: 0!important;
             }
 
-            li {
-
-                &:hover > ul,
-                &.focus > ul {
-                    display: block;
-                    left: 100%;
-                }
-            }
-
         }
 
-        li:hover > ul,
-        li.focus > ul {
-            left: auto;
+    }
+
+    li {
+
+        &:hover > ul,
+        &.focus > ul {
+            display: block;
+            left: 100%;
         }
+    }
+
+    li:hover > ul,
+    li.focus > ul {
+        left: auto;
     }
 
 }

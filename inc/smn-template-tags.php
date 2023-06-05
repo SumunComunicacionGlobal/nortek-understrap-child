@@ -119,7 +119,7 @@ function smn_subterms_collapse( $term ) {
 		if ( $q->have_posts() ) { ?>
 
 			<h3 class="btn btn-primary btn-block btn-collapse collapsed" data-toggle="collapse" href="#<?php echo $term->slug; ?>-details" aria-expanded="false" aria-controls="<?php echo $term->slug; ?>">
-				<?php echo $term->name; ?>
+				<?php echo sprintf( __( 'Ver %s', 'nortek' ), $term->name ); ?>
 			</h3>
 
 			<div class="collapse" id="<?php echo $term->slug; ?>-details">

@@ -46,10 +46,6 @@ $post_type = get_post_type();
 
 					get_template_part( 'global-templates/filtro', 'blog' );
 
-				} elseif ( is_tax( 'product_cat' ) ) {
-
-					get_template_part( 'global-templates/subcategories' );
-
 				}
 				
 				if ( have_posts() ) { ?>
@@ -78,6 +74,13 @@ $post_type = get_post_type();
 				} else {
 					// get_template_part( 'loop-templates/content', 'none' );
 				}
+
+				if ( is_tax( 'product_cat' ) ) {
+
+					get_template_part( 'global-templates/subcategories' );
+
+				}
+				
 				?>
 
 				<?php if ( is_tax() ) {

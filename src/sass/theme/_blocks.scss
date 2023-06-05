@@ -503,8 +503,10 @@ body.understrap-no-sidebar {
 
     padding: $spacer*2 $spacer;
     border-radius: $border-radius;
-    background-color: $secondary-60;
+    // background-color: $secondary-60;
     transition: $btn-transition;
+    border: $border-width solid $border-color;
+    box-shadow: $box-shadow;
 
     a:not(.wp-block-file__button) {
         font-size: $lead-font-size;
@@ -512,8 +514,7 @@ body.understrap-no-sidebar {
     }
 
     &:hover {
-        // background-color: darken( $secondary, $theme-color-interval );
-        background-color: $secondary;
+        background-color: $light;
     }
 
     &:not(.wp-element-button) {
@@ -521,8 +522,16 @@ body.understrap-no-sidebar {
     }
 
     .wp-block-file__button {
+        font-size: $font-size-base;
         @extend .stretched-link;
         border: $btn-border-width solid;
+        background-color: $primary;
+        color: $white;
+
+        &:hover {
+            background-color: darken($primary, $theme-color-interval);
+            color: $white;
+        }
     }
 }
 

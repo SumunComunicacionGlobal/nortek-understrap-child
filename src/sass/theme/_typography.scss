@@ -46,7 +46,6 @@ ul.wp-block-list {
     &.list-unstyled {
 
         li {
-            background: none;
             padding-left: 0;
             min-height: unset;
             border-bottom: 1px solid $border-color;
@@ -55,6 +54,10 @@ ul.wp-block-list {
 
             &:first-child {
                 border-top: 1px solid $border-color;
+            }
+
+            &::before {
+                background: none;
             }
         }
     }

@@ -90,7 +90,7 @@ if ( $terms ) { ?>
 
 				<?php // smn_subterms_buttons( $term ); ?>
 
-				<?php smn_subterms_collapse( $term ); ?>
+				<?php // smn_subterms_collapse( $term ); ?>
 
 			</div>
 

@@ -285,6 +285,7 @@ function smn_get_reusable_block( $block_id = '' ) {
     if ( empty( $block_id ) || (int) $block_id !== $block_id ) {
         return;
     }
+	$block_id = apply_filters( 'wpml_object_id', $block_id, 'wp_block', true );
     $content = get_post_field( 'post_content', $block_id );
     return apply_filters( 'the_content', $content );
 }
