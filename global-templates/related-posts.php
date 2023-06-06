@@ -8,8 +8,10 @@ $posts_ids = false;
 $terms_ids = false;
 
 if ( is_singular() ) {
+
 	$posts_ids = get_post_meta( get_the_ID(), 'related_posts', true );
 	$terms_ids = get_post_meta( get_the_ID(), 'related_terms', true );
+	
 } elseif( is_tax() ) {
 
 	$related_terms_text = get_field( 'related_terms_text', get_queried_object() );
@@ -26,12 +28,26 @@ if ( is_singular() ) {
 
 if ( $terms_ids ) {
 
-	$args = array(
+	$args_terms = array(
 		'include'		=> $terms_ids,
 		'hide_empty'	=> false,
 	);
+	
+} elseif ( is_tax( 'product_cat' ) ) {
 
-	$terms = get_terms( $args );
+	$queried_obj = get_queried_object();
+	$args_terms = array(
+		'taxonomy'		=> $queried_obj->taxonomy,
+		'parent'		=> $queried_obj->parent,
+		'exclude'		=> $queried_obj->term_id,
+		'hide_empty'	=> false,
+	);
+	
+}
+
+if ( isset( $args_terms ) ) {
+
+	$terms = get_terms( $args_terms );
 
 	if ( $terms ) { ?>
 
@@ -46,7 +62,9 @@ if ( $terms_ids ) {
 		</div>
 
 	<?php }
+
 }
+
 
 if ( $posts_ids ) {
 
