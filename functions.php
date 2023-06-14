@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'PRODUCTS_PAGE_ID', 42 );
+define( 'PRODUCTS_PAGE_ID', apply_filters( 'wpml_object_id', 42, 'page' ) );
 define( 'PRODUCT_COLUMNS_CLASS', 'col-sm-6 col-lg-3 mb-3' );
 
 // UnderStrap's includes directory.
